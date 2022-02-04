@@ -1,5 +1,7 @@
 # Daily Weather
 
+![main](https://github.com/Louis-La/hourly-weather/blob/main/screenshots/weather.png)
+
 **Tech-stack**
 * Front-end: HTML5, CSS, Boostrap, React.js, JavaScript
 * Back-end: Express
@@ -22,6 +24,8 @@ By typing in a correct city name or zip code, the current weather will be displa
 Incorrect city names will display an error message saying that the city name does not exist.
 
 The search bar uses a weather API endpoint provided by visualcrossing.com
+
+![warning](https://github.com/Louis-La/hourly-weather/blob/main/screenshots/warning.png)
 
 ---
 
