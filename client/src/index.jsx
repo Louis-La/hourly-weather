@@ -33,11 +33,9 @@ function App() {
   return (
     <div className="container">
 
-
       <div className=" d-flex justify-content-center">
         <img src="dailyweather.png" className="websitelogo" alt="weatherlogo" />
       </div>
-
 
       <div>
         <div className="container-sm input-group mb-3 d-flex justify-content-center">
@@ -66,13 +64,10 @@ function App() {
               id="button-addon2"
               onClick={getCurrentWeather}
             >
-              Submit
+              Search
             </button>
-
           </div>
-
         </div>
-
       </div>
 
       {showWeatherResults ?

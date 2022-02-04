@@ -16,7 +16,7 @@ app.get('/', (req, res) => {
 app.get('/current', (req, res) => {
 
   const location = req.query.id;
-  const epoch = Date.now()
+  // const epoch = Date.now()
   const url = `https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${location}?unitGroup=us&include=hours%2Ccurrent%2Calerts%2Cdays&key=${config.APIKEY}&contentType=json`
   // const url = `https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${location}/${epoch}?key=${config.APIKEY}`
   axios.get(url)

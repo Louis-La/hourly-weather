@@ -1,54 +1,26 @@
 import React, { useEffect, useState } from 'react';
+import helpers from './helpers';
 
 const CurrentWeatherCard = (props) => {
 
   const [weatherPhoto, setWeatherPhoto] = useState('');
 
   const changeWeatherPhoto = () => {
-    let condition = props.currentCityWeather.days[0].conditions.toLowerCase();
-    if (condition.includes('lightning')) {
-      setWeatherPhoto('./weatherPics/lightning.gif');
-    } else if (condition.includes('overcast')) {
-      setWeatherPhoto('./weatherPics/overcast.jpeg');
-    } else if (condition.includes('rain')) {
-      setWeatherPhoto('./weatherPics/rain.gif');
-    } else if (condition.includes('wind')) {
-      setWeatherPhoto('./weatherPics/windy.gif');
-    } else if (condition.includes('sun')) {
-      setWeatherPhoto('./weatherPics/sunny.webp');
-    } else if (condition.includes('cloudy')) {
-      setWeatherPhoto('./weatherPics/cloudy.gif');
-    } else if (condition.includes('clear')) {
-      setWeatherPhoto('./weatherPics/clear.jpeg');
-    }
+    const condition = props.currentCityWeather.days[0].conditions.toLowerCase();
+    const weatherPhoto = helpers.changeWeatherPic(condition)
+    setWeatherPhoto(weatherPhoto);
   }
 
   useEffect(() => {
     changeWeatherPhoto();
   }, [changeWeatherPhoto])
 
-  console.log('🌝', props.currentCityWeather)
-  const date = new Date()
-  const newDate = date.toDateString() + ' ' + date.toTimeString()
-  // console.log(props.currentCityWeather.alerts[0].description.split('*'))
+  // console.log('🌝', props.currentCityWeather)
+  const { temp, feelslike, conditions, humidity, visibility, 
+          uvindex, windspeed, datetime } = props.currentCityWeather.days[0];
+
   return (
     <div className='d-flex flex-column align-items-center'>
-
-      {/* <div className="card" style={{ width: "20rem" }}>
-        <div>
-          {props.currentCityWeather.resolvedAddress}
-        </div>
-        <img src={weatherPhoto} className="card-img-top weatherPic" alt="weather" />
-        <div className="card-body">
-          <p className="card-text">Currently {props.currentCityWeather.days[0].temp}° F</p>
-          <p className="card-text">Feels like {props.currentCityWeather.days[0].feelslike}</p>
-          <p className="card-text">Conditions {props.currentCityWeather.days[0].conditions}</p>
-          <p className="card-text">Humidity {props.currentCityWeather.days[0].humidity}%</p>
-          <p className="card-text">Visibility {props.currentCityWeather.days[0].visibility} mi</p>
-          <p className="card-text">UV Index {props.currentCityWeather.days[0].uvindex}</p>
-          <p className="card-text">Wind Speed {props.currentCityWeather.days[0].windspeed} mph</p>
-        </div>
-      </div> */}
 
       <div class="card mb-3 mainCard" style={{ width: "50rem" }}>
         <div class="d-flex justify-content-center">
@@ -69,17 +41,19 @@ const CurrentWeatherCard = (props) => {
                   <li class="list-group-item">Visibility</li>
                   <li class="list-group-item">UV Index</li>
                   <li class="list-group-item">Wind Speed</li>
+                  <li class="list-group-item">Local Date</li>
                 </ul>
               </div>
               <div class="col-md-6">
                 <ul class="list-group list-group-flush">
-                  <li class="list-group-item">{props.currentCityWeather.days[0].temp}° F</li>
-                  <li class="list-group-item">{props.currentCityWeather.days[0].feelslike}° F</li>
-                  <li class="list-group-item">{props.currentCityWeather.days[0].conditions}</li>
-                  <li class="list-group-item">{props.currentCityWeather.days[0].humidity}%</li>
-                  <li class="list-group-item">{props.currentCityWeather.days[0].visibility} mi</li>
-                  <li class="list-group-item">{props.currentCityWeather.days[0].uvindex}</li>
-                  <li class="list-group-item">{props.currentCityWeather.days[0].windspeed} mph</li>
+                  <li class="list-group-item">{temp}° F</li>
+                  <li class="list-group-item">{feelslike}° F</li>
+                  <li class="list-group-item">{conditions}</li>
+                  <li class="list-group-item">{humidity}%</li>
+                  <li class="list-group-item">{visibility} mi</li>
+                  <li class="list-group-item">{uvindex}</li>
+                  <li class="list-group-item">{windspeed} mph</li>
+                  <li class="list-group-item">{datetime}</li>
                 </ul>
               </div>
             </div>
