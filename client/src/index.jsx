@@ -14,7 +14,7 @@ function App() {
     document.getElementsByClassName('citySearchBar')[0].value = '';
     axios({ method: 'get', url: `/current?id=${cityName}` })
       .then((results) => {
-        console.log(results.data)
+        // console.log(results.data)
         setCurrentCityWeather(results.data);
         setShowWeatherResults(true);
       })
