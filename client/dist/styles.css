@@ -42,9 +42,6 @@ body {
   /* visibility: hidden; */
   background-color: rgb(212, 124, 124);
   color: white;
-  
-  
-
 }
 .warningMessage:hover {
   background-color: rgb(212, 124, 124);

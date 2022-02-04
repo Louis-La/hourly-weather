@@ -3,7 +3,6 @@ import axios from 'axios';
 import ReactDOM from 'react-dom';
 import CurrentWeatherCard from './components/CurrentWeatherCard.jsx';
 
-
 function App() {
 
   const [cityName, setCityName] = useState('');
@@ -76,7 +75,6 @@ function App() {
         /> : ''}
     </div>
   )
-
 }
 
 ReactDOM.render(<App />, document.getElementById('app'));
