@@ -1,0 +1,53 @@
+body {
+  background: rgb(103,196,226);
+  background: linear-gradient(276deg, rgba(103,196,226,1) 0%, rgba(16,171,177,0.33657212885154064) 50%, rgba(0,212,255,0.16010154061624648) 100%);
+}
+
+.websitelogo {
+  height: 25em;
+  margin: -5em;
+}
+
+.submitButton {
+  color: white;
+  background-color: rgb(67, 135, 224);
+}
+
+.citySearchBar {
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.mainCard {
+  border-radius: 1em;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 5px 10px;
+}
+
+.cityTitle {
+  padding-top: 1em;
+  font-size: large;
+  font-weight: bold;
+  margin-bottom: 0em;
+}
+
+.weatherPic {
+  border-radius: 8px;
+  height: 18rem;
+  width: 18rem;
+  object-fit: cover;
+  margin: 1.5em;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 7px 12px;
+}
+
+.warningMessage {
+  /* visibility: hidden; */
+  background-color: rgb(212, 124, 124);
+  color: white;
+  
+  
+
+}
+.warningMessage:hover {
+  background-color: rgb(212, 124, 124);
+  color:white;
+  cursor: default;
+}

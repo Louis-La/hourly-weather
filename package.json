@@ -19,7 +19,9 @@
   },
   "homepage": "https://github.com/Louis-La/hourly-weather#readme",
   "dependencies": {
+    "axios": "^0.25.0",
     "body-parser": "^1.19.1",
+    "bootstrap": "^5.1.3",
     "express": "^4.17.2",
     "nodemon": "^2.0.15",
     "react": "^17.0.2",
