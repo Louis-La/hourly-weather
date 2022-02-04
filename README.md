@@ -31,18 +31,22 @@ The search bar uses a weather API endpoint provided by visualcrossing.com
 
 **Installation**
 
-1) Install all packages by running the following commands in your terminal.
+1) In the root directory of the folder, you will see a file called `example.config.js`.
+* Rename the final name to `config.js` and replace the string `INPUT_KEY_HERE` with your API key from virtualcrossing.com
+
+2) Install all packages by running the following commands in your terminal.
 ```
 npm install
 ```
-2) Start the server.
+3) Start the server.
 ```
 npm run server
 ```
-3) On a separate terminal, run webpack.
+4) On a separate terminal, run webpack.
 ```
 npm run start
 ```
+5) On your browser, open the application at http://localhost:4000/
 
 ---
 
