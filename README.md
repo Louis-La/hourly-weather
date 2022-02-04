@@ -21,6 +21,8 @@ By typing in a correct city name or zip code, the current weather will be displa
 
 Incorrect city names will display an error message saying that the city name does not exist.
 
+The search bar uses a weather API endpoint provided by visualcrossing.com
+
 ---
 
 **Installation**
@@ -40,9 +42,4 @@ npm run start
 
 ---
 
-Some potential and upcoming features include:
-* Verification symbol for businesses that have verified their store with the application
-* Feature that allows existing or future boba stores to apply to have their store featured on the front
-* Image carousel banner with new drinks/updates
-* Mobile friendly application
-* Icons for social media
+
